@@ -1,69 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wild Thyme Gourmet
+A dynamic restaurant page
 
-## Available Scripts
+Objectives
+Learning Objectives
+After completing this assignment, you should:
 
-In the project directory, you can run:
+Understand how to design and execute a front end application given ambiguous requirements by a client
+Understand how React works to create a dynamic frontend application
+Performance Objectives
+After completing this assignment, you should be able to:
 
-### `npm start`
+Create wireframes and an outline of objects needed as part of the planning process when making a complex front end application
+Execute client requirements to make a complete application
+Details
+Deliverables
+A repo containing a create-react-app project
+I'm a Full Stack Developer Mode
+A "client" has approached you and asked you to help them build a web presence. They are a local restaurant called Wild Thyme Gourmet. They don't know anything about the Internet, but they know they need a web page. They want an interactive menu that displays all of their food choices with prices, descriptions, etc. They also want the customer to be able to select menu items and create an order with a total price. When the user saves the order, it should alert the user that their order was placed and empty the current order.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use create-react-app to to create an updating menu page. See Additional Resources for an example of an actual restaurant page.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# react-restaurant-app
+Tasks
+Getting Started (Thinking in React: Mock + Step 1)
+ Setup the scaffolding
+ Setup a mock of the page
+ Produce static data for the menu items
+ Produce a functional static mockup
+Menu (Thinking in React: Step 2, 3, & 4)
+ console.log the static JSON for the menu items
+ Render a component for each menu item, not according to category.
+ Define a FoodItem component
+ Define a FoodList component that calls FoodItem
+ console.log the food object when I click on its price button
+Order view
+ Define an Order component
+ Render an instance of Order component
+ Define an order object in your application state
+ Pass the order to the Order component
+ console.log the order when the user clicks on the food's price
+ Add the food object to the order
+ In Order, console.log the order
+ In Order, console.log a food model every time a food model is added to the order
+ Render the data from the order every time the order is updated
+ In Order, define a subtotal function that calculates the total price
+ console.log, then render, every time the order is updated
+Hey Mikey, I Think He Likes It Mode
+ Organize menu items by category
+ Add a navigation bar that allows the user to toggle between the Menu page and the Order page
+Additional Resources
+Example of a real restaurant app
