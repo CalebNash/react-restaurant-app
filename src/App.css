@@ -18,3 +18,22 @@ header{
 .link-button{
   text-decoration: none;
 }
+
+.foodImg{
+  padding-left: 5px;
+  width: 30%;
+  height: 120px;
+}
+
+.webName{
+  font-size: 20px;
+  margin-bottom: 0px;
+  color:#fff;
+}
+
+.items {
+  text-align: center;
+}
+
+.addToOrder{
+}

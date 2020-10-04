@@ -1,16 +1,19 @@
 import React from 'react';
+import FoodItem from './FoodItem.js'
+import Order from './Order.js'
 import './App.css';
 
 
-class Restaurant extends React.Component{
+class FoodList extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-    foodList: []
+    foodList: [],
+    order: [],
     }
   }
   componentDidMount(){
-    const foodlist = [{
+    const foodList = [{
     name: 'Spaghetti',
     price:'15.49',
     descripion: 'Spaghetti with house made Meat Sauce which is prepared fresh daily with garlic and herbs',
@@ -30,18 +33,37 @@ class Restaurant extends React.Component{
     },
     {
     name:'New York Strip',
-    price:'32.00',
+    price:'25.00',
     descripion:'12oz New York Strip grilled to order ',
-    url:'https://aandmfarmsbeef.com/wp-content/uploads/2017/02/grass-fed-ny-strip.jpeg',
+    url:'https://theviewfromgreatisland.com/wp-content/uploads/2020/01/new-york-strip-steak-sliced-scaled.jpg',
     },
   ];
-  this.setState({foodlist});
+  this.setState({foodList});
+
+  this.addOrder = this.addOrder.bind(this);
   }
+
+  addOrder(food){
+    const order = [...this.state.order, food];
+    this.setState({order: order});
+  }
+
+
   render(){
+    //console.log(this.state.order);
     return(
-      <div>Hello</div>
+      <React.Fragment>
+       <nav className="navbar navbar-dark bg-dark">
+       <p className="webName">Wild Thyme Gourmet</p>
+       </nav>
+      <div className='container'>
+        <FoodItem foodList={this.state.foodList} addOrder={this.addOrder}/>
+        <h1>Order</h1>
+        <Order order={this.state.order}/>
+      </div>
+      </React.Fragment>
     )
   }
 }
 
-export default Restaurant;
+export default FoodList;

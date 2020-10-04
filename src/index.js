@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
-import Restaurant from './Restaurant';
+import FoodList from './FoodList';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Restaurant />
+    <FoodList />
   </React.StrictMode>,
   document.getElementById('root')
 );
