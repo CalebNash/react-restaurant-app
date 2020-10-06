@@ -41,12 +41,20 @@ class FoodList extends React.Component{
   this.setState({foodList});
 
   this.addOrder = this.addOrder.bind(this);
+  this.removeOrder = this.removeOrder.bind(this);
   }
 
   addOrder(food){
     const order = [...this.state.order, food];
     this.setState({order: order});
   }
+
+  removeOrder(ordereditem){
+    const order = [...this.state.order];
+    const index = order.indexOf(ordereditem);
+    order.splice(index, 1);
+    this.setState({order});
+}
 
 
   render(){
@@ -59,7 +67,7 @@ class FoodList extends React.Component{
       <div className='container'>
         <div className='row'>
           <FoodItem foodList={this.state.foodList} addOrder={this.addOrder}/>
-          <Order order={this.state.order}/>
+          <Order order={this.state.order} removeOrder={this.removeOrder}/>
         </div>
       </div>
       </React.Fragment>
