@@ -35,5 +35,6 @@ header{
   text-align: center;
 }
 
-.addToOrder{
+.subtotal{
+  background-color: #C6C8CA;
 }
