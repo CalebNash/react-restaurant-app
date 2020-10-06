@@ -15,19 +15,19 @@ class FoodList extends React.Component{
   componentDidMount(){
     const foodList = [{
     name: 'Spaghetti',
-    price:15.49,
+    price:15.00,
     descripion: 'Spaghetti with house made Meat Sauce which is prepared fresh daily with garlic and herbs.',
     url: 'https://cmx.weightwatchers.co.uk/assets-proxy/weight-watchers/image/upload/t_WINE_EXTRALARGE/mkc4dqbjgfrnuarawox8.jpg',
     },
     {
     name: 'Mediterranean Baked Halibut',
-    price: 19.99,
+    price: 20.00,
     descripion: 'Halibut and veggies, tossed in a bright Mediterranean sauce with lots of citrus, olive oil, fresh garlic and spices.',
     url: 'https://www.themediterraneandish.com/wp-content/uploads/2016/05/One-Pan-Baked-Halibut-Recipe-7.jpg',
     },
     {
     name: 'Ribeye',
-    price: 29.99,
+    price: 30.00,
     descripion: '14oz CAB Ribeye grilled to order.',
     url: 'https://foremangrillrecipes.com/wp-content/uploads/2013/06/featured-ribeye-steak-foreman-grill.jpg',
     },
