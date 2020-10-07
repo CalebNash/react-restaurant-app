@@ -15,7 +15,7 @@ class FoodList extends React.Component{
   componentDidMount(){
     const foodList = [{
     name: 'Spaghetti',
-    price:15.00,
+    price:15.49,
     descripion: 'Spaghetti with house made Meat Sauce which is prepared fresh daily with garlic and herbs.',
     url: 'https://cmx.weightwatchers.co.uk/assets-proxy/weight-watchers/image/upload/t_WINE_EXTRALARGE/mkc4dqbjgfrnuarawox8.jpg',
     },
@@ -27,7 +27,7 @@ class FoodList extends React.Component{
     },
     {
     name: 'Ribeye',
-    price: 30.00,
+    price: 30.99,
     descripion: '14oz CAB Ribeye grilled to order.',
     url: 'https://foremangrillrecipes.com/wp-content/uploads/2013/06/featured-ribeye-steak-foreman-grill.jpg',
     },
@@ -42,6 +42,7 @@ class FoodList extends React.Component{
 
   this.addOrder = this.addOrder.bind(this);
   this.removeOrder = this.removeOrder.bind(this);
+  this.editOrder = this.editOrder.bind(this);
   }
 
   addOrder(food){
@@ -54,8 +55,14 @@ class FoodList extends React.Component{
     const index = order.indexOf(ordereditem);
     order.splice(index, 1);
     this.setState({order});
-}
+  }
 
+  editOrder(orderItem, instructions){
+  // console.log(orderItem, instructions);
+  // console.log(orderItem.specialinstructions = instructions);
+    orderItem.instructions = instructions
+    console.log(this.state.ordereditems);
+  }
 
   render(){
     //console.log(this.state.order);
@@ -67,7 +74,7 @@ class FoodList extends React.Component{
       <div className='container'>
         <div className='row'>
           <FoodItem foodList={this.state.foodList} addOrder={this.addOrder}/>
-          <Order order={this.state.order} removeOrder={this.removeOrder}/>
+          <Order order={this.state.order} removeOrder={this.removeOrder} editOrder={this.editOrder}/>
         </div>
       </div>
       </React.Fragment>
