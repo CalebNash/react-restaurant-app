@@ -43,6 +43,8 @@ class FoodList extends React.Component{
   this.addOrder = this.addOrder.bind(this);
   this.removeOrder = this.removeOrder.bind(this);
   this.editOrder = this.editOrder.bind(this);
+  this.visibleMenu = this.visibleMenu.bind(this);
+  this.visibleHome = this.visibleHome.bind(this);
   }
 
   addOrder(food){
@@ -58,25 +60,52 @@ class FoodList extends React.Component{
   }
 
   editOrder(orderItem, instructions){
-  // console.log(orderItem, instructions);
-  // console.log(orderItem.specialinstructions = instructions);
     orderItem.instructions = instructions
     console.log(this.state.ordereditems);
   }
+
+  visibleMenu(){
+  document.getElementById('not-hide').style.display='none'
+  document.getElementById('hide').style.display='block'
+
+  }
+
+  visibleHome(){
+    document.getElementById('hide').style.display='none'
+    document.getElementById('not-hide').style.display='block'
+
+  }
+
 
   render(){
     //console.log(this.state.order);
     return(
       <React.Fragment>
-       <nav className="navbar navbar-dark bg-dark">
-       <p className="webName">Wild Thyme Gourmet</p>
-       </nav>
+      <div id='not-hide'>
+        <nav className="navbar navbar-dark bg-dark">
+          <p className="webName">Wild Thyme Gourmet</p>
+          <div className='pages'>
+            <button className="btn  menu-button"type="button" onClick={() => this.visibleHome()}>Home</button>
+            <button className="btn  menu-button"type="button" onClick={() => this.visibleMenu()}>Menu</button>
+          </div>
+        </nav>
+        <h1 className='home-info'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem iure porro nulla, vel quasi, delectus ipsam ea ex, tempore suscipit a eveniet voluptatum temporibus veniam accusamus hic repellendus, maiores!</h1>
+      </div>
+      <div id='hide'>
+         <nav className="navbar navbar-dark bg-dark">
+           <p className="webName">Wild Thyme Gourmet</p>
+           <div className='pages'>
+             <button className="btn  menu-button"type="button" onClick={() => this.visibleHome()}>Home</button>
+             <button className="btn  menu-button"type="button" onClick={() => this.visibleMenu()}>Menu</button>
+           </div>
+         </nav>
       <div className='container'>
         <div className='row'>
           <FoodItem foodList={this.state.foodList} addOrder={this.addOrder}/>
-          <Order order={this.state.order} removeOrder={this.removeOrder} editOrder={this.editOrder}/>
+          <Order order={this.state.order} removeOrder={this.removeOrder} editOrder={this.editOrder} foodList={this.state.foodList}/>
         </div>
       </div>
+    </div>
       </React.Fragment>
     )
   }

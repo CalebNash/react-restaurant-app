@@ -3,8 +3,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-header{
-  background-color: black;
+
+.menu-button{
+  font-size: 20px;
+  margin-bottom: 0px;
+  color:#fff;
+}
+
+
+ #hide{
+  display: none
+}
+
+#not-hide{
+ display: block
+}
+
+.home-info{
+  color: #fff;
 }
 
 .menu {
@@ -12,7 +28,10 @@ header{
 }
 
 .checkout{
-  background-color: blue;
+  display: flex;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  justify-content: space-between;
 }
 
 .link-button{
@@ -33,12 +52,52 @@ header{
 
 .items {
   text-align: center;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+.item-desc{
+  display: inline;
 }
 
 .subtotal{
-  background-color: #C6C8CA;
+  display: inline;
+  margin: 10px 0px;
 }
 
 .order-title{
-  background-color: #C6C8CA;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+.order-item{
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  border-bottom: solid #fff 1px;
+}
+
+.order-desc{
+  justify-content: space-between;
+}
+
+#instructions{
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+.save{
+  display:block;
+  color: #fff;
+}
+
+.add-to-order{
+  color: #fff;
+}
+
+.submit-order{
+  color: #fff;
+}
+
+.delete{
+  color:  #fff;
 }

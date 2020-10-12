@@ -15,7 +15,7 @@ class FoodItem extends React.Component{
     this.props.addOrder(food);
   }
   render(){
-    const foodList = this.props.foodList.map((item, index) => <li className="list-group-item  list-group-item-dark list-style items" key={index}><img className="foodImg"src={item.url} alt='#'/><h4>{item.name}</h4><p>{item.descripion}</p><button className="btn "type="button" onClick={() => this.handleClick(item)}>Add to order ${item.price}</button></li>);
+    const foodList = this.props.foodList.map((item, index) => <li className="list-group-item  list-group-item-dark list-style items" key={index}><img className="foodImg"src={item.url} alt='#'/><section className='item-desc'><h4>{item.name}</h4><p>{item.descripion}</p></section><button className="btn add-to-order"type="button" onClick={() => this.handleClick(item)}>Add to order ${item.price}</button></li>);
     return(
   <ul className="list-group col-12 col-md-6">
     {foodList}
